@@ -23,6 +23,7 @@ npx skills add noklip-io/agent-skills --skill three-js
 | [three-js](./skills/three-js) | Comprehensive Three.js reference for 3D web graphics |
 | [nuqs](./skills/nuqs) | Type-safe URL query state management for React |
 | [theatre-js](./skills/theatre-js) | Motion design editor and animation library for the web |
+| [gsap](./skills/gsap) | Professional-grade JavaScript animation library |
 
 ## Skill: nuqs
 
@@ -67,6 +68,23 @@ Motion design editor and animation library with visual timeline editor:
 
 ```bash
 npx skills add noklip-io/agent-skills --skill theatre-js
+```
+
+## Skill: gsap
+
+Professional-grade JavaScript animation library with extensive plugin ecosystem:
+
+- **Core**: gsap.to, from, fromTo, timelines, easing, callbacks
+- **ScrollTrigger**: Scroll-based animations, pin, scrub, snap
+- **ScrollSmoother**: Smooth scrolling, parallax effects
+- **SplitText**: Text splitting and character animation
+- **SVG**: DrawSVG, MorphSVG, MotionPath plugins
+- **Flip**: Layout animations (FLIP technique)
+- **React**: useGSAP hook, cleanup patterns
+- **Utilities**: toArray, clamp, mapRange, interpolate
+
+```bash
+npx skills add noklip-io/agent-skills --skill gsap
 ```
 
 ## Contributing
