@@ -22,6 +22,7 @@ npx skills add noklip-io/agent-skills --skill three-js
 |-------|-------------|
 | [three-js](./skills/three-js) | Comprehensive Three.js reference for 3D web graphics |
 | [nuqs](./skills/nuqs) | Type-safe URL query state management for React |
+| [theatre-js](./skills/theatre-js) | Motion design editor and animation library for the web |
 
 ## Skill: nuqs
 
@@ -51,6 +52,21 @@ Complete Three.js reference with 18 documentation files covering:
 
 ```bash
 npx skills add noklip-io/agent-skills --skill three-js
+```
+
+## Skill: theatre-js
+
+Motion design editor and animation library with visual timeline editor:
+
+- **Core**: Project, Sheet, Object, Sequence architecture
+- **Prop Types**: Number, compound, rgba, image, custom types
+- **Studio**: Visual timeline editor, keyframe editing, export
+- **React**: useVal, usePrism, Atom, Theatric
+- **R3F**: editable components, SheetProvider, 3D animation
+- **Production**: State export, assets, tree-shaking
+
+```bash
+npx skills add noklip-io/agent-skills --skill theatre-js
 ```
 
 ## Contributing
