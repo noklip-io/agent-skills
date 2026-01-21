@@ -24,6 +24,7 @@ npx skills add noklip-io/agent-skills --skill three-js
 | [nuqs](./skills/nuqs) | Type-safe URL query state management for React |
 | [theatre-js](./skills/theatre-js) | Motion design editor and animation library for the web |
 | [gsap](./skills/gsap) | Professional-grade JavaScript animation library |
+| [payload](./skills/payload) | Payload CMS development (standalone version) |
 
 ## Skill: nuqs
 
@@ -85,6 +86,24 @@ Professional-grade JavaScript animation library with extensive plugin ecosystem:
 
 ```bash
 npx skills add noklip-io/agent-skills --skill gsap
+```
+
+## Skill: payload
+
+Standalone Payload CMS skill for AI coding agents:
+
+- **Collections**: Fields, hooks, access control, versioning, drafts
+- **Fields**: All field types, validation, conditional fields, virtual fields
+- **Queries**: Local API, REST, GraphQL, filtering, relationships
+- **Hooks**: beforeChange, afterChange, beforeDelete, context management
+- **Access Control**: Field-level, row-level security, complex queries
+- **Plugins**: Plugin architecture, package structure, extending collections
+- **Adapters**: Database adapters, storage adapters, transactions
+
+> **Note:** Claude Code users should prefer the official [Payload Marketplace plugin](https://github.com/payloadcms/payload) which includes MCP tools. This standalone version is for other AI agents (Cursor, OpenCode, Copilot) or users who prefer not to install the full plugin.
+
+```bash
+npx skills add noklip-io/agent-skills --skill payload
 ```
 
 ## Contributing
