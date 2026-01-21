@@ -21,6 +21,22 @@ npx skills add noklip-io/agent-skills --skill three-js
 | Skill | Description |
 |-------|-------------|
 | [three-js](./skills/three-js) | Comprehensive Three.js reference for 3D web graphics |
+| [nuqs](./skills/nuqs) | Type-safe URL query state management for React |
+
+## Skill: nuqs
+
+Best practices for nuqs - type-safe search params state management:
+
+- Setup with adapters (Next.js, React, Remix, React Router)
+- `useQueryState` and `useQueryStates` hooks
+- Built-in parsers and custom parsers
+- Server Components with `createSearchParamsCache`
+- Testing with `withNuqsTestingAdapter`
+- Common patterns and critical mistakes to avoid
+
+```bash
+npx skills add noklip-io/agent-skills --skill nuqs
+```
 
 ## Skill: three-js
 
