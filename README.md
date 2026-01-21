@@ -20,11 +20,30 @@ npx skills add noklip-io/agent-skills --skill three-js
 
 | Skill | Description |
 |-------|-------------|
+| [react-19](./skills/react-19) | React 19 patterns and breaking changes vs React 18 |
 | [three-js](./skills/three-js) | Comprehensive Three.js reference for 3D web graphics |
 | [nuqs](./skills/nuqs) | Type-safe URL query state management for React |
 | [theatre-js](./skills/theatre-js) | Motion design editor and animation library for the web |
 | [gsap](./skills/gsap) | Professional-grade JavaScript animation library |
 | [payload](./skills/payload) | Payload CMS development (standalone version) |
+
+## Skill: react-19
+
+Comprehensive React 19 skill covering 19.0 through 19.2+ with 10 reference documents:
+
+- **New Hooks**: useActionState, useOptimistic, use(), useFormStatus, useEffectEvent (19.2)
+- **New Components**: `<Activity>` for hide/show with state preservation (19.2)
+- **Paradigm Shifts**: Server-first thinking, compiler-first optimization, declarative mutations
+- **Anti-Patterns**: What to stop doing in React 19
+- **Deprecations**: forwardRef, Context.Provider, removed APIs with migration guides
+- **React Compiler**: Automatic memoization details and when manual is still useful
+- **Server Components**: RSC, Server Actions, directives, streaming
+- **TypeScript**: Type changes, codemods, new patterns
+- **Migration**: Covers React 16/17/18 to 19 upgrade paths
+
+```bash
+npx skills add noklip-io/agent-skills --skill react-19
+```
 
 ## Skill: nuqs
 
