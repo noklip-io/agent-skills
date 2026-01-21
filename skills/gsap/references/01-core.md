@@ -254,9 +254,13 @@ gsap.delayedCall(2, myFunction, [arg1, arg2])
 gsap.killTweensOf(myFunction)
 ```
 
-## Quick Setters
+## Quick Setters & Quick To
 
 For performance-critical scenarios:
+
+### gsap.quickSetter()
+
+Creates an optimized setter function for rapid property updates.
 
 ```javascript
 // Create optimized setter
@@ -268,6 +272,173 @@ gsap.ticker.add(() => {
   setX(mouseX)
   setRotation(angle)
 })
+```
+
+### gsap.quickTo()
+
+Creates a function that animates to a value with built-in tweening. Best for cursor-following animations.
+
+```javascript
+// Create quickTo functions
+const xTo = gsap.quickTo('.cursor', 'x', { duration: 0.4, ease: 'power3' })
+const yTo = gsap.quickTo('.cursor', 'y', { duration: 0.4, ease: 'power3' })
+
+// Call on mouse move - smooth interpolation
+document.addEventListener('mousemove', (e) => {
+  xTo(e.clientX)
+  yTo(e.clientY)
+})
+```
+
+**quickSetter vs quickTo:**
+- `quickSetter`: Instant updates, no tweening (for RAF loops)
+- `quickTo`: Smooth tweened interpolation (for cursor following)
+
+## Keyframes
+
+Animate through multiple states in a single tween.
+
+### Array Syntax
+
+```javascript
+gsap.to('.box', {
+  keyframes: [
+    { x: 100, duration: 1 },
+    { y: 100, duration: 0.5 },
+    { rotation: 360, duration: 1, ease: 'elastic' }
+  ]
+})
+```
+
+### Percentage Syntax (CSS-style)
+
+```javascript
+gsap.to('.box', {
+  keyframes: {
+    '0%': { x: 0, y: 0 },
+    '50%': { x: 100, y: 0, ease: 'power2.in' },
+    '100%': { x: 100, y: 100 }
+  },
+  duration: 2
+})
+```
+
+### Shared Properties
+
+```javascript
+gsap.to('.box', {
+  keyframes: {
+    x: [0, 100, 100],
+    y: [0, 0, 100],
+    ease: 'power2.inOut'  // applies to all keyframes
+  },
+  duration: 2
+})
+```
+
+## Ticker
+
+GSAP's internal timing engine. Use for custom render loops.
+
+```javascript
+// Add function to tick
+const update = () => console.log('tick')
+gsap.ticker.add(update)
+
+// Remove function
+gsap.ticker.remove(update)
+
+// Set FPS (default: 60)
+gsap.ticker.fps(30)
+
+// Lag smoothing - threshold, adjustedLag
+// Prevents huge jumps after tab becomes visible again
+gsap.ticker.lagSmoothing(500, 33)  // if lag > 500ms, act as if 33ms
+
+// Disable lag smoothing (not recommended)
+gsap.ticker.lagSmoothing(0)
+
+// Delta ratio (useful for physics)
+gsap.ticker.add(() => {
+  velocity *= gsap.ticker.deltaRatio()  // adjust for frame rate
+})
+```
+
+## Register Effect
+
+Create reusable animation effects.
+
+```javascript
+// Define effect
+gsap.registerEffect({
+  name: 'fade',
+  effect: (targets, config) => {
+    return gsap.to(targets, {
+      duration: config.duration,
+      opacity: 0,
+      y: config.y,
+      ease: 'power2.out'
+    })
+  },
+  defaults: { duration: 1, y: 0 },
+  extendTimeline: true  // enable tl.fade()
+})
+
+// Use effect
+gsap.effects.fade('.box')
+gsap.effects.fade('.box', { duration: 2, y: -50 })
+
+// Use in timeline (if extendTimeline: true)
+const tl = gsap.timeline()
+tl.fade('.box', { y: 20 })
+  .fade('.box2', {}, '<')
+```
+
+## Get Property
+
+Read current property values.
+
+```javascript
+// Get current value
+const x = gsap.getProperty('.box', 'x')
+const rotation = gsap.getProperty('.box', 'rotation')
+
+// With unit
+const xPx = gsap.getProperty('.box', 'x', 'px')
+const widthPercent = gsap.getProperty('.box', 'width', '%')
+
+// From element reference
+const element = document.querySelector('.box')
+const opacity = gsap.getProperty(element, 'opacity')
+```
+
+## Advanced Repeat Options
+
+### repeatRefresh
+
+Re-records start/end values on each repeat. Useful with random values.
+
+```javascript
+gsap.to('.box', {
+  x: 'random(-200, 200)',
+  y: 'random(-100, 100)',
+  rotation: 'random(-180, 180)',
+  repeat: -1,
+  repeatRefresh: true,  // new random values each repeat!
+  duration: 1
+})
+```
+
+### invalidate()
+
+Clears recorded start/end values. Call before next play to use current values.
+
+```javascript
+const tween = gsap.to('.box', { x: 100, paused: true })
+
+// Later, after box position changed:
+tween.invalidate()
+tween.restart()  // now animates from new current position
 ```
 
 ## Match Media

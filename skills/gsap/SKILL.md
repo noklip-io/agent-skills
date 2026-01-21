@@ -54,7 +54,8 @@ tl.to('.box1', { x: 100 })
 
 | Reference | Use When |
 |-----------|----------|
-| `references/01-core.md` | Basic tweens, special properties, callbacks |
+| `references/00-cheatsheet.md` | Quick reference, common operations at a glance |
+| `references/01-core.md` | Basic tweens, special properties, callbacks, quickTo, ticker |
 | `references/02-easing.md` | Easing functions, custom eases |
 | `references/03-timeline.md` | Sequencing, positioning, labels, nesting |
 | `references/04-stagger.md` | Staggered animations, grid distributions |
@@ -66,6 +67,7 @@ tl.to('.box1', { x: 100 })
 | `references/10-flip.md` | Layout animations (FLIP technique) |
 | `references/11-react.md` | useGSAP hook, cleanup, React patterns |
 | `references/12-observer-draggable.md` | Gesture detection, draggable elements |
+| `references/13-text-plugins.md` | TextPlugin, ScrambleTextPlugin |
 
 ## Common Patterns
 

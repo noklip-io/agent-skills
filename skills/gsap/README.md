@@ -10,11 +10,12 @@ npx skills add noklip-io/agent-skills --skill gsap
 
 ## What's Covered
 
-This modular skill includes 12 comprehensive reference files:
+This modular skill includes 14 comprehensive reference files:
 
 | Reference | Topics |
 |-----------|--------|
-| `01-core.md` | gsap.to, from, fromTo, set, special properties, callbacks |
+| `00-cheatsheet.md` | Quick reference for common operations |
+| `01-core.md` | gsap.to, from, fromTo, quickTo, ticker, registerEffect, keyframes |
 | `02-easing.md` | All easing functions, custom eases, bounce, wiggle |
 | `03-timeline.md` | Sequencing, positioning, labels, nesting, control |
 | `04-stagger.md` | Staggered animations, grid distributions |
@@ -26,6 +27,7 @@ This modular skill includes 12 comprehensive reference files:
 | `10-flip.md` | Layout animations (FLIP technique) |
 | `11-react.md` | useGSAP hook, cleanup, React patterns |
 | `12-observer-draggable.md` | Gesture detection, draggable elements |
+| `13-text-plugins.md` | TextPlugin, ScrambleTextPlugin |
 
 ## Triggers
 
@@ -39,6 +41,7 @@ This skill activates when you mention:
 - Flip plugin, layout animation, FLIP technique
 - useGSAP, @gsap/react
 - Draggable, Observer, drag and drop
+- TextPlugin, ScrambleTextPlugin, typewriter effect
 
 ## Resources
 
