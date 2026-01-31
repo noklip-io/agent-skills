@@ -13,7 +13,7 @@ shadcn/ui is not headless. It provides styled, copy-and-own components built on 
 Primary docs:
 - Docs entry point: https://ui.shadcn.com/docs
 - Base UI project docs: https://base-ui.com
-- Base UI skill: /Users/jbm/.agents/skills/base-ui
+- Base UI skill: skills/base-ui
 
 Important:
 - Base UI vs Radix docs and the conversion rule are defined in `references/overview.md`. Use that guidance instead of the Radix components index.

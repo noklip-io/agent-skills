@@ -20,7 +20,7 @@
 - Figma: https://ui.shadcn.com/docs/figma
 - v0: https://ui.shadcn.com/docs/v0
 - llms.txt: https://ui.shadcn.com/llms.txt
-- Base UI skill: /Users/jbm/.agents/skills/base-ui
+- Base UI skill: skills/base-ui
 - Base UI project docs: https://base-ui.com
 - Base UI issues: https://github.com/mui/base-ui/issues
 - shadcn/ui issues: https://github.com/shadcn-ui/ui/issues

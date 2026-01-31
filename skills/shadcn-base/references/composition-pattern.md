@@ -45,5 +45,5 @@ Use these references when explaining the paradigm or justifying API choices:
 - Component-based software engineering research: https://hrcak.srce.hr/44741
 
 ## Cross-Reference
-- Base UI skill: /Users/jbm/.agents/skills/base-ui
+- Base UI skill: skills/base-ui
 - Vercel composition guidance: /Users/jbm/.agents/skills/vercel-composition-patterns

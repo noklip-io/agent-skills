@@ -26,6 +26,7 @@ npx skills add noklip-io/agent-skills --skill three-js
 | [theatre-js](./skills/theatre-js) | Motion design editor and animation library for the web |
 | [gsap](./skills/gsap) | Professional-grade JavaScript animation library |
 | [payload](./skills/payload) | Payload CMS development (standalone version) |
+| [base-ui](./skills/base-ui) | Base UI reference and workflows for @base-ui/react |
 | [shadcn-base](./skills/shadcn-base) | shadcn/ui Base UI edition: components, CLI, theming, and composition |
 
 ## Skill: react-19
@@ -124,6 +125,25 @@ Standalone Payload CMS skill for AI coding agents:
 
 ```bash
 npx skills add noklip-io/agent-skills --skill payload
+```
+
+## Skill: base-ui
+
+Base UI reference and workflows for @base-ui/react:
+
+- **Overview**: install, portals, iOS Safari notes, LLM docs
+- **Components**: full component index with doc links
+- **Styling**: className/state, data attributes, CSS variables, Tailwind/CSS Modules/CSS-in-JS
+- **Composition**: render props, ref forwarding, useRender patterns
+- **Customization**: eventDetails, propagation control, controlled/uncontrolled
+- **Animation**: transitions/animations, keepMounted, getAnimations
+- **Forms**: Form/Field patterns, validation, server errors, RHF/TanStack
+- **TypeScript**: props/state namespaces, actionsRef typing
+- **Utilities**: CSP/Direction providers, mergeProps
+- **A11y**: accessibility guidance, edge cases, examples
+
+```bash
+npx skills add noklip-io/agent-skills --skill base-ui
 ```
 
 ## Skill: shadcn-base

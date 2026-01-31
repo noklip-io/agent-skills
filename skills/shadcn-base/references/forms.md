@@ -2,7 +2,7 @@
 
 Use the Field family to compose accessible field blocks with labels, help text, and errors.
 See Base UI Field docs: https://ui.shadcn.com/docs/components/base/field
-See Base UI skill: /Users/jbm/.agents/skills/base-ui
+See Base UI skill: skills/base-ui
 
 ## Core Structure
 - `Field` wraps a single control.
