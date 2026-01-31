@@ -26,6 +26,7 @@ npx skills add noklip-io/agent-skills --skill three-js
 | [theatre-js](./skills/theatre-js) | Motion design editor and animation library for the web |
 | [gsap](./skills/gsap) | Professional-grade JavaScript animation library |
 | [payload](./skills/payload) | Payload CMS development (standalone version) |
+| [shadcn-base](./skills/shadcn-base) | shadcn/ui Base UI edition: components, CLI, theming, and composition |
 
 ## Skill: react-19
 
@@ -123,6 +124,22 @@ Standalone Payload CMS skill for AI coding agents:
 
 ```bash
 npx skills add noklip-io/agent-skills --skill payload
+```
+
+## Skill: shadcn-base
+
+Base UI edition of shadcn/ui with Base UI-only composition rules:
+
+- **Docs map**: Base UI component index with conversion rule for `/components/base/*`
+- **Composition**: render/useRender only; no Radix `asChild`
+- **Setup**: CLI, installation, components.json, registries
+- **Design**: theming, dark mode, CVA-based variants
+- **Forms**: field patterns + form library integrations
+- **Examples**: complex components and edge cases
+- **Ops**: MCP guidance, changelog checks, issue links
+
+```bash
+npx skills add noklip-io/agent-skills --skill shadcn-base
 ```
 
 ## Contributing
